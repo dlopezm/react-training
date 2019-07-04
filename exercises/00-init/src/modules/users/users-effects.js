@@ -10,8 +10,6 @@ const addUser = async (firstName, lastName) => {
         firstName: firstName,
         lastName: lastName
     });
-
-    return response.data;
 }
 
 export {getUsers, addUser}
