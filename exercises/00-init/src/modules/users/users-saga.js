@@ -11,18 +11,20 @@ function* getUsers() {
     }
     catch (e)
     {
-        console.log(`getUsers Saga failed:${e}`)
+        console.error("getUsers Saga failed")
+        console.error(e)
     }
 }
 
 function* addUser(user) {
     try {
         yield call(addUserEffect, user.firstName, user.lastName)
-        yield getUsers();
+        yield call(getUsers);
     }
     catch (e)
     {
-        console.log(`addUser Saga failed:${e}`)
+        console.log("addUser Saga failed")
+        console.log(e)
     }
 }
 

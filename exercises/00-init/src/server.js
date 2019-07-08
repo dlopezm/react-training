@@ -9,7 +9,7 @@ const users = [
 ]
 
 app.get('/users', function (req, res) {
-    res.send(JSON.stringify(users))
+    res.json(users)
 })
 
 app.post('/users', function (req, res) {
