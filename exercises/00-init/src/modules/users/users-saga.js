@@ -23,8 +23,8 @@ function* addUser(user) {
     }
     catch (e)
     {
-        console.log("addUser Saga failed")
-        console.log(e)
+        console.error("addUser Saga failed")
+        console.error(e)
     }
 }
 
